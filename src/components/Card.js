@@ -1,8 +1,8 @@
 import React from "react"
 
 import { Link } from "react-router-dom"
-
  
+  
 const Card = () =>{
     return(
         
@@ -17,6 +17,7 @@ const Card = () =>{
                     <Link to={`lermais`}><button type="button" class="btn btn-success mx-3  col-3">Ler Mais</button></Link>
                     <button type="button" class="btn btn-danger mx-3  col-3">Excluir    </button>
                 </div>
+                
             </div>
         </div>
     )
