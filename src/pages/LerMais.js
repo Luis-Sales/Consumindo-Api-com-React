@@ -1,10 +1,16 @@
 import React from "react"
 
 import NavBar from "../components/NavBar"
-import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft'
+
+import { useParams } from 'react-router-dom'
 
 
-const LerMais = () =>{
+const LerMais = ({nome}) =>{
+
+    const { id } = useParams()
+    //Fzer um get, usando o id
+    console.log(id)
     return(
         <>
             <>

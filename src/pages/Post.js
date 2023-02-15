@@ -19,14 +19,15 @@ import * as yup from "yup"
 
 const Form = () =>{
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm({
+    const { register, handleSubmit,  formState: { errors } } = useForm({
         resolver: yupResolver(schema)
     })
 
     
     const addPost = data => axios.post('https://reqres.in/api/users', data)
-           .then(()=>{
-            console.log('ok');
+            
+           .then((response)=>{
+            console.log(response);
         })
     
 
