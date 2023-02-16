@@ -1,7 +1,10 @@
-import React from "react"
+import React,{useState, useEffect} from "react"
 
 import NavBar from "../components/NavBar"
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft'
+
+
+import axios from "axios"
 
 import { useParams } from 'react-router-dom'
 
@@ -10,18 +13,37 @@ const LerMais = ({nome}) =>{
 
     const { id } = useParams()
     //Fzer um get, usando o id
-    console.log(id)
+    
+    const [PostLerMais,setPostLerMais] = useState([])
+
+    
+    useEffect(() => {
+        if (id) {
+          axios.get(`https://reqres.in/api/users/${id}`)
+            .then(response => {
+              console.log(response.data.data)
+              setPostLerMais(response.data.data)
+            })
+            .catch(error => {
+              console.error(error);
+            });
+        }
+      }, [id])
+       
+
+    
+
     return(
         <>
             <>
             <NavBar Logo={<ArrowCircleLeftIcon fontSize="large"/>}/>
 
             <div className='d-flex  justify-content-center mb-3'>    
-            <div class="card  mt-5" style={{ width: '28rem' }} >
+            <div className="card  mt-5" style={{ width: '28rem' }} >
                 
-                <div class="card-body">
-                    <h5 class="card-title">Ariel Gay</h5><hr/> 
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div className="card-body">
+                    <h5 className="card-title">{PostLerMais.first_name}</h5><hr/> 
+                    <p className="card-text">{PostLerMais.email}.</p>
                     
                 </div>
             </div>

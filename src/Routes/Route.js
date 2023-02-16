@@ -3,6 +3,7 @@ import React from "react";
 import Home from '../pages/Home'
 import LerMais from '../pages/LerMais'
 import Post from '../pages/Post'
+import Edit from '../pages/edit'
 
 import {
   createBrowserRouter,
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/post",
     element: <Post/>,
+  },
+  {
+    path: "/edit/:id",
+    element: <Edit/>,
   },
 
 ]);

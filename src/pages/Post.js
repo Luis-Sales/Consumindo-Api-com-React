@@ -51,7 +51,7 @@ const Form = () =>{
                         <p className="text-danger col-12 mt-3">{errors.title?.message}</p>
 
 
-                            <label for="floatingInput">Título</label>
+                            <label htmlFor="floatingInput">Título</label>
                         </div>
 
                         <div className="form-floating mb-3">
@@ -63,7 +63,7 @@ const Form = () =>{
 
                             <p className="text-danger col-12 mt-3">{errors.description?.message}</p>
 
-                            <label for="floatingPassword">Descrição</label>
+                            <label htmlFor="floatingPassword">Descrição</label>
                         </div>
 
                         <div className="input-group mb-3">
@@ -75,9 +75,9 @@ const Form = () =>{
                             
                         </div>
 
-                        <div class="d-grid gap-2 col-6 mx-auto">
+                        <div className="d-grid gap-2 col-6 mx-auto">
                             
-                            <button class="btn btn-success" type="submit">Enviar</button>
+                            <button className="btn btn-success" type="submit">Enviar</button>
                         </div>
                         
                     </form>
