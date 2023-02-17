@@ -2,4 +2,13 @@
 
 
 
-// ?
+// Com fazer um delete usando axios, em react ?
+
+
+
+
+
+
+
+
+
